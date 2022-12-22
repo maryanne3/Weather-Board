@@ -2,7 +2,22 @@ body {
     background-color: hotpink;
 }
 h1 {
-    color: white;
+    color: grey;
     text-align: center;
     font-size: 50px;
 }
+h2{
+    color: white;
+    text-align: center;
+    font-style:italic;
+    font-weight: bold;
+    font-size: 30px;
+    margin-left: auto;
+} 
+div.city {
+
+     border: 12px solid white;
+     border-radius: 0.8px;
+     margin-left:auto
+    
+    }
