@@ -1,3 +1,9 @@
+:root {
+  --border: black;
+}
+* {
+  box-sizing: border-box;
+}
 h1{
     font-size: 30px;
     text-align: center;
@@ -12,13 +18,17 @@ h1{
 }
 .h4{
 
-  /* middle of searh form */    
-
-    
+  /* middle of searh form */       
 }
-
-.main-container{
-border-radius: 20px;
-border-color: black;
-
+.current{
+  margin-left: 350px;
+  margin-bottom: 100px;
+  width: 1100px;
+  bottom: 105px;
 }
+.five{
+  margin-left: 350px;
+  width: 1100px;
+  bottom: 105px;
+  }
+
