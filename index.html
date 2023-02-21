@@ -9,10 +9,8 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <h1>Weather Dashboard</h1>
   </head>
 
@@ -20,22 +18,22 @@
     <!--Side container for search bar -->
     <div class="sidecontainer">
       <h4>Search City</h4>
-      <form id="city">
+      <form id="search-city">
         <div class="form-group input-group">
           <input
             type="text"
             class="form-control"
-            id="search-city"
+            id="input-serach"
             placeholder="Enter Your City"
           />
-          <br />
-          <input class="search-city" type="submit" value="Search" />
+          <br/>
+          <input class="searchCity" type="submit" value="Search" />
         </div>
       </form>
       <!-- Search list & clear history card-->
       <div class="card">
         <ul class="list-group list-group-flush" id="search-list">
-          <li class="list-group-item"></li>
+          <li class="list-group-item"></li> 
         </ul>
         <button id="clear-history" class="btn btn-sm btn-light">
           Clear History
@@ -44,28 +42,20 @@
     </div>
 
     <!-- Current-day Weather forecast container-->
-    <div class="main-container">
-      <div class="col mt-4 mr-5">
-        <div class="card currentCard pb-2 pt-1">
-          <h5 class="card-title mt-2 text-center">
-            Current-Day Weather Forecast
-          </h5>
-        </div>
-      </div>
-    </div>
-
     <!-- Five-day Weather forecast container-->
+    
+   <div class="cards col-12 col-md-9 border p-2 mb-3">
+  <div class="d-flex flex-column" id="weather-container"></div></div>
+  </div>
 
-    <div class="col mt-4">
-      <div class="card pb-5 fiveDayCard pl-5">
-        <h5 class="card-title mt-5 text-center">Five-Day Weather Forecast</h5>
-      </div>
-    </div>
+  
+    
 
+   
     <!--jQuery, Bootstrap JS, myjs-->
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   </body>
 </html>
