@@ -16,19 +16,7 @@ h1{
    
 
 }
-.h4{
 
-  /* middle of searh form */       
+.weather-container{
+ flex-direction: column;
 }
-.current{
-  margin-left: 350px;
-  margin-bottom: 100px;
-  width: 1100px;
-  bottom: 105px;
-}
-.five{
-  margin-left: 350px;
-  width: 1100px;
-  bottom: 105px;
-  }
-
