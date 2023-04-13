@@ -1,70 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Weather Forecast</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-  </head>
 
-  <body>
-    <h1>Weather Dashboard</h1>
-    <!--Side container for search bar -->
-    <div class="sidecontainer">
-      <h4>Search City</h4>
-      <form id="search-city">
-        <div class="form-group input-group">
-          <input
-            type="text"
-            class="form-control"
-            id="input-serach"
-            placeholder="Enter Your City"
-          />
-          <br/>
-          <input class="searchCity" type="submit" value="Search" />
-        </div>
-      </form>
-      <!-- Search list & clear history card-->
-      <div class="card">
-        <ul class="list-group list-group-flush" id="search-list">
-          <li class="list-group-item"></li> 
-        </ul>
-        <button id="clear-history" class="btn btn-sm btn-light">
-          Clear History
-        </button>
-      </div>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <!-- Jumbotron to display the City name upon search -->
+    <div id="header" class="jumbotron jumbotron-fluid text-container">
+        <h1>Weather Dashboard</h1>
+        <div id="artist-credit"></div>
     </div>
 
-    <!-- Current-day Weather forecast container-->
-    <!-- Five-day Weather forecast container-->
-    
-    
-    <div class="row">
-      <div class="col mt-4">
-          <div class="card pb-5 fiveDayCard pl-5">
-              <h5 class="card-title mt-2 mr-5">Five-Day Forecast </h5>
-              <div class="row">
-                  <div class="col fiveDayOne">
-                  </div>
+    <!--Main Container -->
+    <div id="content" class="container">
+        <div class="row">
 
-              </div>
+    <!--Sidebar Container -->
+            <div id="content-left" class="col-md-3">
+                <form>
+                    <label for="search-city">Search for a City:</label>
+                    <div class="form-row">
+                        <input id="search-city" class="form-control" name="city" ></input>
+                        <br> <br> 
+                        <button id="search-button" class="btn btn-secondary" type="submit"><i class="fas fa-search"></i></button>
+                    </div>
+                </form>
+                <div id="search-error"></div>
+           <!--Recent searches list -->
+                <ul id="city-results" class="list-group mt-4"></ul>
+                <a id="clear-searches" href="#"></a>    
+            </div>
+            <div id="content-right" class="col-md-9 pt-4">
+                <div id="current-weather" class="border rounded"></div>
+                <div id="five-day-forecast" class="mt-5"></div>
+            </div>
+        </div>
+    </div>
 
-          </div>
-      </div>
-  </div>
-  
-    
-
-   
-    <!--jQuery, Bootstrap JS, myjs-->
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-   </body>
+    <script src="./assets/js/script.js"></script>
+    
+</body>
 </html>
